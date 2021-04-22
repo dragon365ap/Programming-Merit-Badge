@@ -1,4 +1,6 @@
 //run in https://cplayground.com/
+//this program takes in a number and adds up all the numbers before (from 1) with the current number. For example, if you put the number 4, the program would calculate 1+2+3+4 and return 10.
+
 #include <iostream>
 using namespace std;
 
