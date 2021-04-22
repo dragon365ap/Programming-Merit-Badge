@@ -1,4 +1,5 @@
 #Run this program in https://trinket.io/python/f7ad7f9864
+#This program takes some text and a key to shift the text by. For example, if you put the letter h, and the key 3. The program would shift the letter h up 3 spaces, i, j, k. The out put should be k.
 
 #declare variables
 text = input("Input text: ")
