@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>3d Figures</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<button onclick="rectangularPrism()">Rectangular Prism</button>
+<button onclick="triangularPrism()">Right Triangular Prism</button>
+<button onclick="sphere()">Sphere</button>
+
+<p id="answer"></p>
+
+<script>
+
+    function rectangularPrism() {
+        var length = prompt("Please enter the length of the rectangular prism: ")
+        var width = prompt("Please enter the width of the rectangular prism: ")
+        var height = prompt("Please enter the height of the rectangular prism: ")
+        var volume = (length * width * height)
+        document.getElementById("answer").innerHTML =
+            "The volume of the rectangular prism is " + volume + " units³."
+    }
+    function triangularPrism() {
+        var length = prompt("Please enter the length of the triangular prism: ");
+        var width = prompt("Please enter the width of the triangular prism: ");
+        var height = prompt("Please enter the height of the triangular prism: ");
+        var volume = (length * width * height/2)
+        document.getElementById("answer").innerHTML =
+            "The volume of the right triangular prism is " + volume + " units."
+    }
+    function sphere() {
+        var radius = prompt("Please enter the radius of the sphere: ")
+        var volume = (3.1415926535*radius**3*4/3).toFixed(2)
+        document.getElementById("answer").innerHTML =
+            "The volume of the sphere is " + volume + " units³."
+    }
+</script>
+</body>
+
+</html>
