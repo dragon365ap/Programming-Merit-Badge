@@ -16,29 +16,39 @@
 
 <script>
 
+    function check(value, text) {
+        do {
+            value = prompt(text)
+        } while (isNaN(value))
+            return value
+    }
+
     function rectangularPrism() {
-        var length = prompt("Please enter the length of the rectangular prism: ")
-        var width = prompt("Please enter the width of the rectangular prism: ")
-        var height = prompt("Please enter the height of the rectangular prism: ")
+        //prompt user
+        var length = check(length, "Please enter the length of the rectangular prism: ")
+        var width = check(width, "Please enter the width of the rectangular prism: ")
+        var height = check(height, "Please enter the height of the rectangular prism: ")
+        //calculate volume and print
         var volume = (length * width * height)
         document.getElementById("answer").innerHTML =
             "The volume of the rectangular prism is " + volume + " units³."
     }
     function triangularPrism() {
-        var length = prompt("Please enter the length of the triangular prism: ");
-        var width = prompt("Please enter the width of the triangular prism: ");
-        var height = prompt("Please enter the height of the triangular prism: ");
-        var volume = (length * width * height/2)
+        //prompt user
+        var length = check(length, "Please enter the length of the triangular prism: ")
+        var width = check(width, "Please enter the width of the triangular prism: ")
+        var height = check(height, "Please enter the height of the triangular prism: ")
+        //calculate volume and print
+        var volume = (length * width * height / 2)
         document.getElementById("answer").innerHTML =
             "The volume of the right triangular prism is " + volume + " units."
     }
     function sphere() {
-        var radius = prompt("Please enter the radius of the sphere: ")
-        var volume = (3.1415926535*radius**3*4/3).toFixed(2)
+        var radius = check(radius, "Please enter the radius of the sphere: ")
+        var volume = (3.1415926535 * radius ** 3 * 4 / 3).toFixed(2)
         document.getElementById("answer").innerHTML =
             "The volume of the sphere is " + volume + " units³."
     }
 </script>
-</body>
 
 </html>
