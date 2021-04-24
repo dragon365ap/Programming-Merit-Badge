@@ -3,7 +3,12 @@
 
 #declare variables
 text = input("Input text: ")
-key = input("Input key: ")
+#check that key is a digit
+while True:
+  key = input("Input key: ")
+  if (key.isdigit()):
+    break
+  
 ascii = 0
 encodedText = ""
 ##loop going though each character for text
